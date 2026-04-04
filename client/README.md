@@ -44,6 +44,14 @@ npm run dev
 
 Open `http://localhost:5173`.
 
+## Screenshots
+
+Add screenshots inside `public/screenshots/` and reference them here:
+
+![Dashboard Overview](./public/screenshots/dashboard-overview.svg)
+![Transactions Admin View](./public/screenshots/transactions-admin.svg)
+![Viewer Role View](./public/screenshots/role-viewer.svg)
+
 ## Project Structure
 
 - `src/context/AppContext.jsx` — state/reducer and derived finance data

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1e293b" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <text x="60" y="70" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#111827">Finance Dashboard UI</text>
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="16" fill="#64748b">Viewer Role - read only mode</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="132" width="1160" height="90" rx="18" fill="#ffffff"/>
+    <rect x="980" y="158" width="200" height="34" rx="10" fill="#ecfeff"/>
+  </g>
+  <text x="86" y="180" font-family="Arial" font-size="24" font-weight="700" fill="#111827">Finance Dashboard</text>
+  <text x="1004" y="180" font-family="Arial" font-size="14" font-weight="700" fill="#0f766e">Role: Viewer</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="250" width="360" height="110" rx="18" fill="#eef2ff"/>
+    <rect x="440" y="250" width="360" height="110" rx="18" fill="#ecfdf3"/>
+    <rect x="820" y="250" width="360" height="110" rx="18" fill="#fff1f2"/>
+  </g>
+  <text x="90" y="288" font-family="Arial" font-size="18" fill="#475569">Total Balance</text>
+  <text x="90" y="328" font-family="Arial" font-size="34" font-weight="700" fill="#111827">$7,950</text>
+  <text x="470" y="288" font-family="Arial" font-size="18" fill="#475569">Income</text>
+  <text x="470" y="328" font-family="Arial" font-size="34" font-weight="700" fill="#111827">$13,560</text>
+  <text x="850" y="288" font-family="Arial" font-size="18" fill="#475569">Expenses</text>
+  <text x="850" y="328" font-family="Arial" font-size="34" font-weight="700" fill="#111827">$5,610</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="390" width="1160" height="250" rx="18" fill="#ffffff"/>
+  </g>
+  <text x="90" y="435" font-family="Arial" font-size="20" font-weight="700" fill="#111827">Transactions</text>
+  <text x="960" y="435" font-family="Arial" font-size="14" fill="#64748b">Add / Edit / Delete hidden</text>
+  <rect x="90" y="455" width="1100" height="1" fill="#e5e7eb"/>
+  <text x="110" y="495" font-family="Arial" font-size="14" fill="#334155">Apr 07, 2026</text>
+  <text x="310" y="495" font-family="Arial" font-size="14" fill="#334155">Groceries</text>
+  <text x="580" y="495" font-family="Arial" font-size="14" fill="#334155">Food</text>
+  <text x="820" y="495" font-family="Arial" font-size="14" font-weight="700" fill="#b91c1c">-$160</text>
+  <text x="110" y="545" font-family="Arial" font-size="14" fill="#334155">Apr 05, 2026</text>
+  <text x="310" y="545" font-family="Arial" font-size="14" fill="#334155">Monthly salary</text>
+  <text x="580" y="545" font-family="Arial" font-size="14" fill="#334155">Salary</text>
+  <text x="820" y="545" font-family="Arial" font-size="14" font-weight="700" fill="#15803d">+$4,200</text>
+
+  <rect x="960" y="485" width="150" height="36" rx="18" fill="#f8fafc" stroke="#dbe4f0"/>
+  <text x="985" y="508" font-family="Arial" font-size="14" fill="#64748b">Viewer mode</text>
+</svg>
