@@ -1,0 +1,20 @@
+export const mockTransactions = [
+  { id: 't1', date: '2026-01-03', description: 'Monthly salary', category: 'Salary', type: 'income', amount: 4200 },
+  { id: 't2', date: '2026-01-06', description: 'Apartment rent', category: 'Housing', type: 'expense', amount: 1400 },
+  { id: 't3', date: '2026-01-10', description: 'Groceries', category: 'Food', type: 'expense', amount: 210 },
+  { id: 't4', date: '2026-01-16', description: 'Freelance landing page', category: 'Freelance', type: 'income', amount: 700 },
+  { id: 't5', date: '2026-02-03', description: 'Monthly salary', category: 'Salary', type: 'income', amount: 4200 },
+  { id: 't6', date: '2026-02-07', description: 'Apartment rent', category: 'Housing', type: 'expense', amount: 1400 },
+  { id: 't7', date: '2026-02-12', description: 'Internet + utilities', category: 'Utilities', type: 'expense', amount: 180 },
+  { id: 't8', date: '2026-02-21', description: 'Weekend trip', category: 'Travel', type: 'expense', amount: 320 },
+  { id: 't9', date: '2026-03-03', description: 'Monthly salary', category: 'Salary', type: 'income', amount: 4200 },
+  { id: 't10', date: '2026-03-09', description: 'Apartment rent', category: 'Housing', type: 'expense', amount: 1400 },
+  { id: 't11', date: '2026-03-14', description: 'Course refund', category: 'Other', type: 'income', amount: 120 },
+  { id: 't12', date: '2026-03-19', description: 'Gym membership', category: 'Health', type: 'expense', amount: 60 },
+  { id: 't13', date: '2026-03-23', description: 'Dining out', category: 'Food', type: 'expense', amount: 95 },
+  { id: 't14', date: '2026-04-01', description: 'Monthly salary', category: 'Salary', type: 'income', amount: 4200 },
+  { id: 't15', date: '2026-04-02', description: 'Stock dividend', category: 'Investment', type: 'income', amount: 140 },
+  { id: 't16', date: '2026-04-05', description: 'Apartment rent', category: 'Housing', type: 'expense', amount: 1400 },
+  { id: 't17', date: '2026-04-06', description: 'Groceries', category: 'Food', type: 'expense', amount: 160 },
+  { id: 't18', date: '2026-04-07', description: 'Taxi rides', category: 'Transport', type: 'expense', amount: 55 }
+];
