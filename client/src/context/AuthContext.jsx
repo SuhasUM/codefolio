@@ -1,10 +1,11 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext(null);
+const TOKEN_KEY = 'eventzee_token';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('cf_token'));
+  const [token, setToken] = useState(localStorage.getItem(TOKEN_KEY));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -36,13 +37,13 @@ export function AuthProvider({ children }) {
   function login(userData, authToken) {
     setUser(userData);
     setToken(authToken);
-    localStorage.setItem('cf_token', authToken);
+    localStorage.setItem(TOKEN_KEY, authToken);
   }
 
   function logout() {
     setUser(null);
     setToken(null);
-    localStorage.removeItem('cf_token');
+    localStorage.removeItem(TOKEN_KEY);
   }
 
   return (

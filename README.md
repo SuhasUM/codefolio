@@ -1,67 +1,51 @@
-﻿# Finance Dashboard UI
+﻿# Eventzee Full-Stack Website
 
-Frontend-only finance dashboard built for the internship assignment.
+Production-ready event management and catering website with:
 
-## Overview
+- modern public marketing website
+- contact/inquiry form connected to MongoDB
+- admin login and dashboard
+- content management (edit hero/services/faq/testimonials/contact)
+- inquiry status and notes management
+- optional SMTP email notifications
 
-This project demonstrates a clean, responsive finance dashboard with:
+## Stack
 
-- summary cards for balance, income, and expenses
-- a balance trend visualization
-- a category-based spending breakdown
-- a searchable, filterable, sortable transaction table
-- simulated roles for Viewer and Admin
-- insights derived from transaction data
-- local persistence with `localStorage`
+- Frontend: React + Vite
+- Backend: Node.js + Express
+- Database: MongoDB (Atlas or local)
+- Auth: JWT
 
-## Tech Stack
+## Main Routes
 
-- React (JavaScript)
-- Vite
-- Context API + `useReducer`
-- Plain CSS for responsive UI
+- `/` public Eventzee site
+- `/admin/login` admin login
+- `/admin` admin dashboard
+- `/api/site-content` public content API
+- `/api/inquiries` inquiry create API
+- `/api/admin/*` admin APIs
 
-## Features Implemented
+## Local Development
 
-- Dashboard Overview with Summary Cards
-- Time-Based Visualization (balance trend)
-- Categorical Visualization (spending breakdown)
-- Transaction List with date, amount, category, type
-- Search, filtering, and sorting
-- Role-Based UI (`viewer` and `admin`)
-- Insights Section
-- State Management with Context
-- Responsive Design
-- Empty-state handling
-- Local storage persistence
-
-## Project Structure
-
-- `client/src/App.jsx` — page composition
-- `client/src/context/AppContext.jsx` — global state + reducer
-- `client/src/utils/finance.js` — totals, trend, breakdown, insights helpers
-- `client/src/components/dashboard/*` — cards + charts
-- `client/src/components/transactions/*` — toolbar, table, modal
-- `client/src/components/insights/InsightsPanel.jsx` — insight cards
-- `client/src/data/mockTransactions.js` — mock data
-- `client/public/screenshots/*` — submission screenshots
-
-## Run Locally
+1. Install dependencies
 
 ```bash
-cd client
 npm install
+cd server && npm install
+cd ../client && npm install
+```
+
+2. Configure env
+
+- Copy `server/.env.example` to `server/.env`
+- Fill MongoDB, JWT, admin, and SMTP settings
+
+3. Run app
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:5173`.
+## Production Deploy
 
-## Screenshots
-
-See [client/README.md](client/README.md) for embedded screenshots.
-
-## Notes
-
-- This is intentionally frontend-only per assignment scope.
-- Role switching is simulated in UI, not backend-auth based.
-- Visualizations are lightweight custom implementations for clarity and simplicity.
+See `DEPLOYMENT.md` for complete instructions (Render + MongoDB Atlas + domain setup).
