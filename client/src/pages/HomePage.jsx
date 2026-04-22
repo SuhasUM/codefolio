@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { defaultSiteContent } from '../data/siteDefaults';
+import { apiUrl } from '../utils/apiBase';
 
 function SectionHeading({ eyebrow, title, description }) {
   return (
@@ -35,7 +36,7 @@ export default function HomePage() {
 
     async function loadContent() {
       try {
-        const response = await fetch('/api/site-content');
+        const response = await fetch(apiUrl('/api/site-content'));
         if (response.ok) {
           const data = await response.json();
           if (active && data.content) {
@@ -62,7 +63,7 @@ export default function HomePage() {
     setStatus({ type: 'pending', message: 'Sending your request...' });
 
     try {
-      const response = await fetch('/api/inquiries', {
+      const response = await fetch(apiUrl('/api/inquiries'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)

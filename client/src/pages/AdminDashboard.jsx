@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { defaultSiteContent } from '../data/siteDefaults';
+import { apiUrl } from '../utils/apiBase';
 
 function mapContentToForm(content) {
   const safe = content || defaultSiteContent;
@@ -63,7 +64,7 @@ export default function AdminDashboard() {
 
   async function loadDashboard() {
     try {
-      const response = await fetch('/api/admin/dashboard', {
+      const response = await fetch(apiUrl('/api/admin/dashboard'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await response.json();
@@ -83,7 +84,7 @@ export default function AdminDashboard() {
 
   async function loadAllInquiries() {
     try {
-      const response = await fetch('/api/admin/inquiries', {
+      const response = await fetch(apiUrl('/api/admin/inquiries'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await response.json();
@@ -143,7 +144,7 @@ export default function AdminDashboard() {
         }
       };
 
-      const response = await fetch('/api/admin/content', {
+      const response = await fetch(apiUrl('/api/admin/content'), {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -167,7 +168,7 @@ export default function AdminDashboard() {
 
   async function updateInquiry(id, currentStatus, notes) {
     try {
-      const response = await fetch(`/api/admin/inquiries/${id}`, {
+      const response = await fetch(apiUrl(`/api/admin/inquiries/${id}`), {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

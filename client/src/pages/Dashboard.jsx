@@ -3,6 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { usePortfolio } from '../context/PortfolioContext';
 import EditorPanel from '../components/EditorPanel';
 import PreviewPanel from '../components/PreviewPanel';
+import { apiUrl } from '../utils/apiBase';
 
 export default function Dashboard() {
   const { user, token, logout } = useAuth();
@@ -16,7 +17,7 @@ export default function Dashboard() {
 
   async function fetchPortfolio() {
     try {
-      const res = await fetch('/api/portfolio/me', {
+      const res = await fetch(apiUrl('/api/portfolio/me'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -35,7 +36,7 @@ export default function Dashboard() {
     setSaveStatus(null);
     try {
       // Save portfolio
-      const portfolioRes = await fetch('/api/portfolio/me', {
+      const portfolioRes = await fetch(apiUrl('/api/portfolio/me'), {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

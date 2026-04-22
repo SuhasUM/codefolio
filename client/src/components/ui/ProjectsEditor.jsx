@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { usePortfolio } from '../../context/PortfolioContext';
+import { apiUrl } from '../../utils/apiBase';
 
 const emptyProject = {
   title: '',
@@ -95,7 +96,7 @@ export default function ProjectsEditor({ token }) {
   async function handleAdd(form) {
     setSaving(true);
     try {
-      const res = await fetch('/api/projects', {
+      const res = await fetch(apiUrl('/api/projects'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify({ ...form, order: projects.length })
@@ -115,7 +116,7 @@ export default function ProjectsEditor({ token }) {
   async function handleUpdate(id, form) {
     setSaving(true);
     try {
-      const res = await fetch(`/api/projects/${id}`, {
+      const res = await fetch(apiUrl(`/api/projects/${id}`), {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body: JSON.stringify(form)
@@ -135,7 +136,7 @@ export default function ProjectsEditor({ token }) {
   async function handleDelete(id) {
     if (!confirm('Delete this project?')) return;
     try {
-      const res = await fetch(`/api/projects/${id}`, {
+      const res = await fetch(apiUrl(`/api/projects/${id}`), {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

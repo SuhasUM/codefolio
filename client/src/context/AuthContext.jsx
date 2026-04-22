@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { apiUrl } from '../utils/apiBase';
 
 const AuthContext = createContext(null);
 const TOKEN_KEY = 'eventzee_token';
@@ -18,7 +19,7 @@ export function AuthProvider({ children }) {
 
   async function fetchMe() {
     try {
-      const res = await fetch('/api/auth/me', {
+      const res = await fetch(apiUrl('/api/auth/me'), {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
