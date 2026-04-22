@@ -46,7 +46,9 @@ async function ensureDefaultData() {
 }
 
 // Middleware
-app.use(cors({
+// Apply CORS only to API routes. Static frontend assets are same-origin and
+// should never be blocked by Origin checks.
+const corsOptions = {
   origin(origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
@@ -54,7 +56,9 @@ app.use(cors({
     return callback(new Error('CORS origin not allowed'));
   },
   credentials: true
-}));
+};
+
+app.use('/api', cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 
 // Routes
